@@ -58,7 +58,8 @@
         }
       }
     },
-    "testblog": {}
+    "testblog": {},
+    "testrepeatable": {}
   },
   "slices": {
     "Text": {
