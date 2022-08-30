@@ -1,8 +1,7 @@
 {
-  "extends": [
-    "@nuxtjs"
-  ],
+  "extends": ["@nuxtjs"],
   "rules": {
-    "vue/multi-word-component-names": "off"
+    "vue/multi-word-component-names": "off",
+    "space-before-function-paren": ["error", "never"]
   }
 }

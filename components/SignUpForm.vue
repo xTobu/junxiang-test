@@ -52,7 +52,7 @@ export default {
     }
   },
   methods: {
-    htmlSerializer (type, element, content, children) {
+    htmlSerializer(type, element, content, children) {
       switch (type) {
         case 'heading1':
           return /* html */ `<h2 class="mb-4 last:mb-0 text-3xl md:text-4xl font-sans font-semibold tracking-tighter text-slate-800">${children.join('')}</h2>`

@@ -1,0 +1,50 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "news",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "imageTitle": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+    },
+    "title": "giving",
+    "description": "shirt",
+    "dateTitle": "2019-06-15T04:55:23+0000",
+    "content": [
+      {
+        "type": "heading1",
+        "text": "Substance",
+        "spans": []
+      },
+      {
+        "type": "image",
+        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+        "alt": null,
+        "copyright": null,
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        }
+      },
+      {
+        "type": "paragraph",
+        "text": "Eiusmod mollit proident aute cupidatat labore in non tempor laboris laboris occaecat officia. Irure amet est cupidatat elit mollit eiusmod. Pariatur laborum veniam sit amet magna esse.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}

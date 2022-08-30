@@ -12,14 +12,16 @@
 
 <script>
 export default {
-  async asyncData ({ $prismic, store }) {
+  async asyncData({ $prismic, store }) {
     const { results: articles } = await $prismic.api.query(
       $prismic.predicate.at('document.type', 'article'),
       {
         orderings: `[${[
           { field: 'my.article.publishDate', direction: 'desc' },
           { field: 'document.first_publication_date', direction: 'desc' }
-        ].map(({ field, direction }) => `${field} ${direction}`).join(', ')}]`,
+        ]
+          .map(({ field, direction }) => `${field} ${direction}`)
+          .join(', ')}]`,
         pageSize: 100
       }
     )
@@ -31,7 +33,7 @@ export default {
       articles
     }
   },
-  head () {
+  head() {
     return {
       title: this.$prismic.asText(this.$store.state.prismic.settings.data.name)
     }

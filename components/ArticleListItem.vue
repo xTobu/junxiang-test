@@ -42,7 +42,7 @@ export default {
     }
   },
   computed: {
-    featuredImage () {
+    featuredImage() {
       if (this.article.data.featuredImage.url) {
         return this.article.data.featuredImage
       }
@@ -53,12 +53,12 @@ export default {
       }
       return null
     },
-    formattedDate () {
+    formattedDate() {
       const date = this.$prismic.asDate(this.article.data.publishDate || this.article.first_publication_date)
 
       return dateFormatter.format(date)
     },
-    excerpt () {
+    excerpt() {
       const text = this.article.data.slices
         .filter(slice => slice.slice_type === 'text')
         .map(slice => this.$prismic.asText(slice.primary.text))

@@ -10,7 +10,14 @@
         <PrismicText
           :field="article.data.title"
           wrapper="h1"
-          class="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl"
+          class="
+            mb-3
+            text-3xl
+            font-semibold
+            tracking-tighter
+            text-slate-800
+            md:text-4xl
+          "
         />
         <p class="font-serif italic tracking-tighter text-slate-500">
           {{ formatDate(article) }}
@@ -27,7 +34,16 @@
           </Heading>
           <ul class="grid grid-cols-1 gap-12">
             <li v-for="latestArticle in latestArticles" :key="latestArticle.id">
-              <h1 class="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+              <h1
+                class="
+                  mb-3
+                  text-3xl
+                  font-semibold
+                  tracking-tighter
+                  text-slate-800
+                  md:text-4xl
+                "
+              >
                 <PrismicLink :field="latestArticle">
                   {{ $prismic.asText(latestArticle.data.title) }}
                 </PrismicLink>
@@ -53,7 +69,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
 })
 
 export default {
-  async asyncData ({ $prismic, store, params }) {
+  async asyncData({ $prismic, store, params }) {
     const article = await $prismic.api.getByUID('article', params.uid)
     const { results: latestArticles } = await $prismic.api.query(
       $prismic.predicate.at('document.type', 'article'),
@@ -61,7 +77,9 @@ export default {
         orderings: `[${[
           { field: 'my.article.publishDate', direction: 'desc' },
           { field: 'document.first_publication_date', direction: 'desc' }
-        ].map(({ field, direction }) => `${field} ${direction}`).join(', ')}]`,
+        ]
+          .map(({ field, direction }) => `${field} ${direction}`)
+          .join(', ')}]`,
         pageSize: 3
       }
     )
@@ -74,17 +92,23 @@ export default {
       latestArticles
     }
   },
-  data () {
+  data() {
     return { components }
   },
-  head () {
+  head() {
     return {
-      title: `${this.$prismic.asText(this.article.data.title)} | ${this.$prismic.asText(this.$store.state.prismic.settings.data.name)}`
+      title: `${this.$prismic.asText(
+        this.article.data.title
+      )} | ${this.$prismic.asText(
+        this.$store.state.prismic.settings.data.name
+      )}`
     }
   },
   methods: {
-    formatDate (article) {
-      const date = this.$prismic.asDate(article.data.publishDate || article.first_publication_date)
+    formatDate(article) {
+      const date = this.$prismic.asDate(
+        article.data.publishDate || article.first_publication_date
+      )
 
       return dateFormatter.format(date)
     }

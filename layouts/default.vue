@@ -20,8 +20,7 @@
           :style="{
             textDecoration: 'underline'
           }"
-          >see the documentation</a
-        >. Remove this bar in <code>layouts/default.vue</code>.
+        >see the documentation</a>. Remove this bar in <code>layouts/default.vue</code>.
       </p>
     </div>
     <Header
@@ -39,19 +38,19 @@
 <script>
 export default {
   computed: {
-    withHeaderProfile () {
+    withHeaderProfile() {
       return this.$store.state.layout.withHeaderProfile
     },
-    withHeaderDivider () {
+    withHeaderDivider() {
       return this.$store.state.layout.withHeaderDivider
     },
-    withFooterSignUpForm () {
+    withFooterSignUpForm() {
       return this.$store.state.layout.withFooterSignUpForm
     },
-    navigation () {
+    navigation() {
       return this.$store.state.prismic.navigation
     },
-    settings () {
+    settings() {
       return this.$store.state.prismic.settings
     }
   }

@@ -4,16 +4,16 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setSettings (state, settings) {
+  setSettings(state, settings) {
     state.settings = settings
   },
-  setNavigation (state, navigation) {
+  setNavigation(state, navigation) {
     state.navigation = navigation
   }
 }
 
 export const actions = {
-  async load (store) {
+  async load(store) {
     const navigation = await this.$prismic.api.getSingle('navigation')
     const settings = await this.$prismic.api.getSingle('settings')
     store.commit('setNavigation', navigation)

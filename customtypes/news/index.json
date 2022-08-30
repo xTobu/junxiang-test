@@ -1,0 +1,55 @@
+{
+  "id": "news",
+  "label": "news",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "imageTitle": {
+        "type": "Image",
+        "config": {
+          "label": "標題圖片",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "標題",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "描述",
+          "placeholder": ""
+        }
+      },
+      "dateTitle": {
+        "type": "Timestamp",
+        "config": {
+          "label": "日期",
+          "placeholder": ""
+        }
+      },
+      "content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "內文",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

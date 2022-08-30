@@ -5,13 +5,13 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setWithHeaderProfile (state, withHeaderProfile) {
+  setWithHeaderProfile(state, withHeaderProfile) {
     state.withHeaderProfile = withHeaderProfile
   },
-  setWithHeaderDivider (state, withHeaderDivider) {
+  setWithHeaderDivider(state, withHeaderDivider) {
     state.withHeaderDivider = withHeaderDivider
   },
-  setWithFooterSignUpForm (state, withFooterSignUpForm) {
+  setWithFooterSignUpForm(state, withFooterSignUpForm) {
     state.withFooterSignUpForm = withFooterSignUpForm
   }
 }

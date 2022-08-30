@@ -6,7 +6,7 @@
 import { components } from '~/slices'
 
 export default {
-  async asyncData ({ $prismic, params, store }) {
+  async asyncData({ $prismic, params, store }) {
     const page = await $prismic.api.getByUID('page', params.uid)
     await store.dispatch('prismic/load')
     store.commit('layout/setWithHeaderProfile', true)
@@ -16,14 +16,18 @@ export default {
       page
     }
   },
-  data () {
+  data() {
     return {
       components
     }
   },
-  head () {
+  head() {
     return {
-      title: `${this.$prismic.asText(this.page.data.title)} | ${this.$prismic.asText(this.$store.state.prismic.settings.data.name)}`
+      title: `${this.$prismic.asText(
+        this.page.data.title
+      )} | ${this.$prismic.asText(
+        this.$store.state.prismic.settings.data.name
+      )}`
     }
   }
 }

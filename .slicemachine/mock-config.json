@@ -59,7 +59,15 @@
       }
     },
     "testblog": {},
-    "testrepeatable": {}
+    "testrepeatable": {},
+    "news": {
+      "content": {
+        "config": {
+          "patternType": "STORY",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "Text": {

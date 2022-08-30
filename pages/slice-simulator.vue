@@ -14,7 +14,7 @@ export default {
   components: {
     SliceSimulator
   },
-  data () {
+  data() {
     return { state, components }
   }
 }
